@@ -1,6 +1,7 @@
 # SpinLuckZone 🎰🎮
 
 Welcome to **SpinLuckZone**, a fun, luck-based web app game where players aim to achieve as many successful outcomes as possible across five exciting rounds. SpinLuckZone is **wager-free** and purely fictional—no real money is involved! It's all about having fun and testing your luck!
+Future URL will be: https://spinluckzone.de
 
 ## 🔥 Features
 - **Five Rounds of Fun**: Test your luck and improve your outcomes in each of the five rounds.
