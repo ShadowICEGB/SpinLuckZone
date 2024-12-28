@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </svelte:head>
 
+<Toast position="t"/>
 <Drawer class="z-50"><DrawerMenu/></Drawer>
 <AppShell>
 	<svelte:fragment slot="sidebarLeft"><Sidebar /></svelte:fragment>
