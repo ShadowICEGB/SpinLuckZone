@@ -1,5 +1,14 @@
 <script lang="ts">
+	import { goto } from "$app/navigation";
     import { list_changelogs } from "$lib/configs/list_changelogs";
+
+    // Slugify the title
+    const slugify = (title: string): string => {
+        return title
+            .toLowerCase()
+            .replace(/\s+/g, '-') 
+            .replace(/[^a-z0-9-]/g, '');
+    };
 
     // Format the date and time into a combined Date object
     const createDateTime = (dateStr: string, timestampStr: string): Date => {
@@ -55,6 +64,8 @@
                     class="item bg-[#111011] rounded-xl relative overflow-hidden"
                     role="button"
                     tabindex="0"
+                    on:click={() => goto(`/libary/changelogs/${slugify(item.title)}`)}
+                    on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') goto(`/libary/changelogs/${slugify(item.title)}`); }}
                 >
                     <div class="details">
                         <div class="date">
@@ -92,6 +103,13 @@
                             </div>
                         </div>
                     </div>
+                    <button 
+                        class="relative z-10 bg-[rgba(var(--color-primary-400)/1)] py-2 px-4 rounded-lg font-bold uppercase shadow-lg"
+                        type="button"
+                        on:click={(e) => { e.stopPropagation(); goto(`/libary/changelogs/${slugify(item.title)}`); }} >
+                        <span>Read more</span>
+                        <i class="fa-solid fa-chevron-down ml-2"></i>
+                    </button>
                 </div>
                 {/each}
             </div>
