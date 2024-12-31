@@ -16,6 +16,7 @@
  * highlight specific information regarding the changelog entry.
  *
  * @typedef {Object} Changelog
+ * @property {string} id - The unique identifier for the changelog entry.
  * @property {string} date - The date when the changelog entry was created or released.
  * @property {string} title - The title or headline of the changelog entry.
  * @property {string} timestamp - The exact timestamp of when the changelog entry was created.
@@ -32,6 +33,7 @@
  * @module types
  */
 export type Changelog = {
+    id: string;
     date: string;
     title: string;
     timestamp: string;

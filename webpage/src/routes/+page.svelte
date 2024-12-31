@@ -1,5 +1,5 @@
 <main>
     <div class="container">
-        <p>SpinLuckZone</p>
+        <p>SpinLuckZone <br> Homepage</p>
     </div>
 </main>
