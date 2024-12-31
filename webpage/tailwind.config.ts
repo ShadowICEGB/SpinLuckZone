@@ -12,6 +12,13 @@ export default {
 			screens: {
 			  'xl-custom': '1724px',
 			},
+			fontFamily: {
+				RussoOne: ['RussoOne', 'sans-serif'],
+				Orbitron: ['Orbitron', 'sans-serif'],
+				Bangers: ['Bangers', 'sans-serif'],
+				Anton: ['Anton', 'sans-serif'],
+				Tomorrow: ['Tomorrow', 'sans-serif'],
+			},
 		},
 	},
 	plugins: [

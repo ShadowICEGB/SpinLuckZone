@@ -3,6 +3,43 @@
 @tailwind utilities;
 @tailwind variants;
 
-html, body { @apply h-full overflow-hidden overflow-y-auto scroll-smooth;font-family: Sora, sans-serif; }
-main { @apply relative mx-3 bg-surface-600; }
+html, body { @apply h-full overflow-hidden overflow-y-auto scroll-smooth bg-tertiary-400;}
+main { @apply relative mx-3 dark:bg-surface-600 bg-tertiary-200; }
 main .container, .header .container, .pageFooter .container { @apply max-w-[2150px] mx-auto; }
+h1,h2,h3,h4,h5,h6 { @apply font-RussoOne; }
+p, a, button, input, label, span { @apply font-Tomorrow; }
+
+/* Anton */
+@font-face {
+	font-family: 'Anton';
+	src: url('/fonts/Anton.ttf');
+	font-display: swap;
+}
+
+/* Bangers */
+@font-face {
+	font-family: 'Bangers';
+	src: url('/fonts/Bangers.ttf');
+	font-display: swap;
+}
+
+/* Orbitron */
+@font-face {
+	font-family: 'Orbitron';
+	src: url('/fonts/Orbitron.ttf');
+	font-display: swap;
+}
+
+/* RussoOne */
+@font-face {
+	font-family: 'RussoOne';
+	src: url('/fonts/RussoOne.ttf');
+	font-display: swap;
+}
+
+/* Tomorrow */
+@font-face {
+	font-family: 'Tomorrow';
+	src: url('/fonts/Tomorrow.ttf');
+	font-display: swap;
+}

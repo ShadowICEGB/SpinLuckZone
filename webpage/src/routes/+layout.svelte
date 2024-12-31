@@ -16,6 +16,20 @@
 	import Sidebar from '$lib/components/App/Sidebar.svelte';
 	import PageFooter from '$lib/components/App/PageFooter.svelte';
 	import DrawerMenu from '$lib/components/App/DrawerMenu.svelte';
+
+	// Handle current route
+	import { currentRoute } from '$lib/stores/currentRoute';
+	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	let activeRoute: string = '/';
+
+	$effect(() => {
+		activeRoute = $page.url.pathname;
+	});
+
+	onMount(() => {
+        currentRoute.set(activeRoute);
+    });	
 </script>
 
 <svelte:head>
