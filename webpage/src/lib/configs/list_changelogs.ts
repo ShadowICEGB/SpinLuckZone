@@ -4,6 +4,48 @@ import type { Changelog } from "../types";
 
 export const list_changelogs: Changelog = [
     {
+        id: "#7",
+        date: "2025-01-01",
+        title: "Sidebar Design V2",
+        timestamp: "2025-01-01T17:16:43Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "release",
+        labels: ["release", "sidebar", "design", "improvement", "beta"],
+        version: "0.06.0",
+        headline: "New Sidebar Design V2",
+        description: "This is the second version of the new sidebar design. The sidebar is now more visually appealing and easier to navigate. We added a function to collapse the sidebar to save space and make it easier to focus on the content. The design is responsive and should work on all devices. We wanted to make the sidebar more visually appealing and easier to navigate. The sidebar is finalized and will not be updated in the future, unless a critical bug is found. We will continue to improve the webpage and add new features in the future.",
+        alertBox: "Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "New design for the sidebar",
+            "Visually appealing",
+            "Easy to navigate",
+            "Responsive design",
+            "Added function to collapse the sidebar",
+            "Finished design, no future updates planned"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
+        id: "#6",
+        date: "2024-12-31",
+        title: "Sidebar Design V1",
+        timestamp: "2024-12-29T17:10:12Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "release",
+        labels: ["release", "sidebar", "design", "improvement", "beta"],
+        version: "0.05.0",
+        headline: "New Sidebar Design",
+        description: "Added a new design to the sidebar. The sidebar is now more visually appealing and easier to navigate. The design is responsive and should work on all devices. The sidebar will be updated with every new release of the webpage. A future design will be added to the sidebar to make it more visually appealing. This current sidebar design is not the final design and will be updated in the future.",
+        alertBox: "Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "New design for the sidebar",
+            "Visually appealing",
+            "Easy to navigate",
+            "Responsive design"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
         id: "#5",
         date: "2024-12-29",
         title: "Slug Routing on Changelog Page",
