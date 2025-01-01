@@ -4,6 +4,27 @@ import type { Changelog } from "../types";
 
 export const list_changelogs: Changelog = [
     {
+        id: "#12",
+        date: "2025-01-01",
+        title: "New Changelog Layout V1",
+        timestamp: "2025-01-01T20:06:22Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "release",
+        labels: ["release", "changelog", "layout", "improvement", "beta"],
+        version: "0.10.0",
+        headline: "New Changelog Layout V1",
+        description: "This is the first version of the new Changelog layout. The Changelog is now visually appealing and easy to navigate. The design is responsive and should work on all devices. We will add more features to the Changelog, like popups and notifications. ",
+        alertBox: "Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "New design for the Changelog",
+            "Visually appealing",
+            "Easy to use",
+            "Responsive design",
+            "Future features will be added to the Changelog"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
         id: "#11",
         date: "2025-01-01",
         title: "PageHeader Logo Improvement",
