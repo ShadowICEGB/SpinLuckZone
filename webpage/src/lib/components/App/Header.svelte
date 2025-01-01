@@ -58,19 +58,19 @@
     }
 </script>
 
-<div class="header mt-3 mx-3 rounded-tl-2xl rounded-tr-2xl dark:bg-surface-600 bg-tertiary-200 px-6">
+<div class="header mt-3 mx-3 rounded-tl-2xl rounded-tr-2xl dark:bg-surface-600 bg-tertiary-200">
     <div class="container flex justify-between items-center">
-        <div>
+        <div class="flex items-center">
             <!-- Hamburger button to trigger sidebar opening on mobile devices -->
             <button 
-                class="hamburger w-8 h-8 flex items-center justify-center 2xl:hidden" 
+                class="hamburger ml-5 w-8 h-8 flex items-center justify-center 2xl:hidden" 
                 on:click={openSidebar} 
                 on:keydown={(e) => e.key === 'Enter' && openSidebar()} 
                 aria-label="Open sidebar"
             >
                 <i class="fa-solid fa-bars p-3 bg-tertiary-400 dark:bg-[#1a1a1a] rounded-lg cursor-pointer"></i>
             </button>
-            <div class="space-x-5">
+            <div class="space-x-5 2xl:ml-0 ml-12">
                 <button aria-label="Notifications" class="relative" use:popup={popupNotification}>
                     <span class="badge-icon variant-filled-warning absolute -top-2 -right-2 z-10">2</span>
                     <i class="fa-regular fa-bell dark:bg-[#1d1d1d] bg-tertiary-400 py-3 px-4 rounded-lg"></i>
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div>
-            <img src="/images/logos/SpinLuckZone.png" alt="SpinLuckZone_Logo" class="w-20 h-20" draggable="false" />
+            <img src="/images/logos/SpinLuckZone.png" alt="SpinLuckZone_Logo" class="w-20 h-20 2xl:ml-28 ml-3" draggable="false" />
         </div>
         <div class="flex items-center">
             <div class="dark:bg-[#1d1d1d] w-36 h-6 rounded-full flex justify-center items-center">
