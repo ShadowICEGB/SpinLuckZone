@@ -133,7 +133,8 @@
                         class:text-[rgba(var(--color-primary-400))]={index === activeIndex}
                         class:font-bold={index === activeIndex}
                         class:hover={index === activeIndex}
-                        class:ml-1={$sidebarCollapse}
+                        class:ml-[0px]={$sidebarCollapse}
+                        class:pl-[4px]={$sidebarCollapse}
                     >
                         <button on:click={() => goto(item.link)} class="w-full text-left py-1" class:text-center={$sidebarCollapse}>
                             <i class="{item.icon} w-8"></i>
