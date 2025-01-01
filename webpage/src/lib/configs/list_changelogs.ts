@@ -4,6 +4,30 @@ import type { Changelog } from "../types";
 
 export const list_changelogs: Changelog = [
     {
+        id: "#9",
+        date: "2025-01-01",
+        title: "Sidebar Menu Items Improvement",
+        timestamp: "2025-01-01T17:58:11Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "bugfix",
+        labels: ["bugfix", "sidebar", "menu", "improvement", "beta"],
+        version: "0.08.1",
+        headline: "Fixed a bug in the Sidebar Menu Items",
+        description: "Fixed a bug in the Sidebar Menu Items. The menu items were not displaying correctly and were overlapping with each other. The bug has been fixed and the menu items should now display correctly and not overlap with each other. The design of the menu items has been improved and they are now visually appealing and easy to navigate. The design is responsive and should work on all devices. We will continue to improve the design of the menu items and add new features in the future.",
+        alertBox: "Fixed a bug in the Sidebar Menu Items | Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "Fixed a bug in the Sidebar Menu Items",
+            "Menu items were not displaying correctly and were overlapping with each other",
+            "Menu items should now display correctly and not overlap with each other",
+            "Improved design of the menu items",
+            "Visually appealing",
+            "Easy to navigate",
+            "Responsive design",
+            "Future features will be added to the menu items"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
         id: "#8",
         date: "2025-01-01",
         title: "PageHeader Design V1",
