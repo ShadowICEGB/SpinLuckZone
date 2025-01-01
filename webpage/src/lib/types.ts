@@ -45,3 +45,30 @@ export type Changelog = {
     changes?: string[];
     image?: string;
 }[];
+
+/**
+ * @description
+ * The `SidebarNavMenu` type defines the structure for representing a collection of sidebar navigation menu items in the project.
+ * Each menu item corresponds to a specific link or route in the application, providing a title, icon, and URL path for navigation.
+ * 
+ * The sidebar navigation menu is typically used for displaying a list of options or sections that users can access to navigate
+ * through the application. This type allows for organizing the menu items with relevant information such as the title of the
+ * section, an icon representing the section, and the link to the corresponding page or route.
+ * 
+ * This type also supports an optional property for displaying notifications or alerts associated with specific menu items,
+ * indicating new updates, messages, or activities that require user attention.
+ * 
+ * @typedef {Object[]} SidebarNavMenu
+ * @property {string} title - The title or name of the menu item.
+ * @property {string} icon - The icon representing the menu item (e.g., a font awesome icon class).
+ * @property {string} link - The URL path or route associated with the menu item.
+ * @property {number} [notification] - An optional number indicating the count of notifications or alerts for this menu item.
+ * 
+ * @module types
+ */
+export type SidebarNavMenu = {
+    title: string;
+    icon: string;
+    link: string;
+    notification?: number;
+}[];
