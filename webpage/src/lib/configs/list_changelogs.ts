@@ -4,6 +4,27 @@ import type { Changelog } from "../types";
 
 export const list_changelogs: Changelog = [
     {
+        id: "#8",
+        date: "2025-01-01",
+        title: "PageHeader Design V1",
+        timestamp: "2025-01-01T17:50:23Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "release",
+        labels: ["release", "sidebar", "design", "improvement", "beta", "enhancement"],
+        version: "0.08.0",
+        headline: "New PageHeader Design V1",
+        description: "This is the first version of the new PageHeader design. The PageHeader is now visually appealing and easy to navigate. The design is responsive and should work on all devices. We will add more features to the PageHeader, like popups and notifications. ",
+        alertBox: "Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "New design for the PageHeader",
+            "Visually appealing",
+            "Easy to use",
+            "Responsive design",
+            "Future features will be added to the PageHeader"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
         id: "#7",
         date: "2025-01-01",
         title: "Sidebar Design V2",
