@@ -7,4 +7,4 @@
  * 
  * @type {string}
  */
-export const applicationVersion: string = "V 0.09.0";
+export const applicationVersion: string = "V 0.09.1";

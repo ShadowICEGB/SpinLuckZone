@@ -4,10 +4,34 @@ import type { Changelog } from "../types";
 
 export const list_changelogs: Changelog = [
     {
+        id: "#11",
+        date: "2025-01-01",
+        title: "PageHeader Logo Improvement",
+        timestamp: "2025-01-01T19:09:45Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "bugfix",
+        labels: ["bugfix", "pageheader", "logo", "improvement", "beta"],
+        version: "0.09.1",
+        headline: "Fixed a bug in the PageHeader Logo",
+        description: "Fixed a bug in the PageHeader Logo. The logo was not displaying correctly and was overlapping with other elements. The bug has been fixed and the logo should now display correctly and not overlap with other elements. The design of the logo has been improved and it is now visually appealing and easy to navigate. The design is responsive and should work on all devices. We will continue to improve the design of the logo and add new features in the future.",
+        alertBox: "Beta content | Please report any bugs or issues you find.",
+        changes: [
+            "Fixed a bug in the PageHeader Logo",
+            "Logo was not displaying correctly and was overlapping with other elements",
+            "Logo should now display correctly and not overlap with other elements",
+            "Improved design of the logo",
+            "Visually appealing",
+            "Easy to navigate",
+            "Responsive design",
+            "Future features will be added to the logo"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
         id: "#10",
         date: "2025-01-01",
         title: "PageHeader Mockup Popups",
-        timestamp: "2025-01-01T17:58:11Z",
+        timestamp: "2025-01-01T18:52:51Z",
         participants: ["/images/participants/ShadowICE.png"],
         type: "release",
         labels: ["release", "pageheader", "mockup", "popups", "beta"],
