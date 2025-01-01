@@ -49,66 +49,68 @@
 </script>
 
 <main>
-    <div class="container">
-        <h1 class="text-3xl font-bold mb-6 text-center">Changelogs</h1>
+    <div>
+        <h1 class="text-4xl font-extrabold text-center mb-10">Changelogs</h1>
         
         <!-- Changelog List -->
         {#each Object.entries(groupedChangelogs) as [monthYear, items]}
-        <section>
-            <h2 class="text-gray-300 font-bold text-xl mb-4">
+        <section class="mb-8">
+            <h2 class="text-xl font-bold text-gray-300 mb-4">
                 {monthYear}
             </h2>
-            <div class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {#each items as item}
                 <div 
-                    class="item bg-[#111011] rounded-xl relative overflow-hidden"
+                    class="bg-[#111011] rounded-lg p-6 shadow-md hover:shadow-lg transition relative"
                     role="button"
                     tabindex="0"
                     on:click={() => goto(`/libary/changelogs/${slugify(item.title)}`)}
                     on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') goto(`/libary/changelogs/${slugify(item.title)}`); }}
                 >
-                    <div class="details">
-                        <div class="date">
-                            <span class="font-bold text-lg uppercase">
-                                {formatDate(item.date).weekday}
-                            </span>
-                            <span class="font-bold text-lg uppercase">
-                                {formatDate(item.date).day}
-                            </span>
+                    <!-- Date and Version -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="text-left">
+                            <span class="block text-lg font-bold">{formatDate(item.date).weekday}</span>
+                            <span class="block text-2xl font-extrabold">{formatDate(item.date).day}</span>
                         </div>
-                        <div class="time">
-                            <div>
-                                <i class="fa-solid fa-clock"></i>
-                                <span class="ml-2">{item.timestamp}</span>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                                <span class="ml-2">{item.type}</span>
-                            </div>
-                        </div>
-                        <div class="version">
-                            <div class="font-bold uppercase">Version</div>
-                            <div class="font-bold">{item.version}</div>
-                        </div>
-                        <div class="description">
-                            <div class="space-y-2">
-                                <span class="font-bold">{item.title}</span>
-                                <div class="flex space-x-2">
-                                {#if item.participants}
-                                    {#each item.participants as participant}
-                                    <img src="{participant}" alt="userIMG" class="w-6 rounded-full">
-                                    {/each}
-                                {/if}
-                                </div>
-                            </div>
+                        <div class="text-right">
+                            <span class="block text-sm text-gray-400">Version</span>
+                            <span class="block text-lg font-bold">{item.version}</span>
                         </div>
                     </div>
+
+                    <!-- Title -->
+                    <h3 class="text-xl font-bold text-white mb-2">{item.title}</h3>
+
+                    <!-- Time and Type -->
+                    <div class="flex items-center text-gray-400 text-sm space-x-4 mb-4">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-clock mr-1"></i> {item.timestamp}
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> {item.type}
+                        </div>
+                    </div>
+
+                    <!-- Participants -->
+                    {#if item.participants}
+                    <div class="flex -space-x-2 mb-4">
+                        {#each item.participants as participant}
+                        <img 
+                            src="{participant}" 
+                            alt="Participant" 
+                            class="w-8 h-8 rounded-full border-2 border-gray-800"
+                        >
+                        {/each}
+                    </div>
+                    {/if}
+
+                    <!-- Read More Button -->
                     <button 
-                        class="relative z-10 bg-[rgba(var(--color-primary-400)/1)] py-2 px-4 rounded-lg font-bold uppercase shadow-lg"
+                        class="w-full bg-pink-500 text-white py-2 px-4 rounded-lg font-bold uppercase hover:bg-pink-600 transition"
                         type="button"
-                        on:click={(e) => { e.stopPropagation(); goto(`/libary/changelogs/${slugify(item.title)}`); }} >
-                        <span>Read more</span>
-                        <i class="fa-solid fa-chevron-down ml-2"></i>
+                        on:click={(e) => { e.stopPropagation(); goto(`/libary/changelogs/${slugify(item.title)}`); }}>
+                        Read More
                     </button>
                 </div>
                 {/each}
