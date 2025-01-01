@@ -17,6 +17,11 @@
 	import PageFooter from '$lib/components/App/PageFooter.svelte';
 	import DrawerMenu from '$lib/components/App/DrawerMenu.svelte';
 
+	// Floating UI for Popups
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
+	import { storePopup } from '@skeletonlabs/skeleton';
+	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
+			
 	// Handle current route
 	import { currentRoute } from '$lib/stores/currentRoute';
 	import { page } from '$app/stores';

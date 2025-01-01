@@ -6,6 +6,27 @@ export const list_changelogs: Changelog = [
     {
         id: "#9",
         date: "2025-01-01",
+        title: "PageHeader Mockup Popups",
+        timestamp: "2025-01-01T17:58:11Z",
+        participants: ["/images/participants/ShadowICE.png"],
+        type: "release",
+        labels: ["release", "pageheader", "mockup", "popups", "beta"],
+        version: "0.09.0",
+        headline: "New PageHeader Mockup Popups",
+        description: "This is the first version of the new PageHeader mockup popups. The popups are now visually appealing and easy to navigate. At the moment, the popups are static and do not have any functionality. ",
+        alertBox: "Alpha content | Please dont report any bugs or issues you find.",
+        changes: [
+            "New design for the PageHeader mockup popups",
+            "Visually appealing",
+            "Easy to use",
+            "Static popups",
+            "Future features will be added to the popups"
+        ],
+        image: "/images/bg/bgProfilePlaceholder3.webp"
+    },
+    {
+        id: "#9",
+        date: "2025-01-01",
         title: "Sidebar Menu Items Improvement",
         timestamp: "2025-01-01T17:58:11Z",
         participants: ["/images/participants/ShadowICE.png"],
