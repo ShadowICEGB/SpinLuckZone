@@ -68,7 +68,7 @@
 	{@html `<\u{73}cript nonce="%sveltekit.nonce%">(${setInitialClassState.toString()})();</script>`}
 </svelte:head>
 
-<div class="sidebar 2xl:w-64 w-0 2xl:block hidden h-full relative transition-[width] duration-200" class:sidebar-collapse={$sidebarCollapse}>
+<div class="sidebar w-64 xl-custom:block hidden h-full relative transition-[width] duration-200" class:sidebar-collapse={$sidebarCollapse}>
 
     <!-- Collapse button -->
     <button on:click={collapseSidebar} aria-label="Collapse sidebar" class="absolute top-[30px] right-0 z-40" 

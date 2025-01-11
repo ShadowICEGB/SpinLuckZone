@@ -74,3 +74,32 @@ export type SidebarNavMenu = {
     link: string;
     notification?: number;
 }[];
+
+/**
+ * @description
+ * The `GameList` type defines the structure for representing a collection of games in the project.
+ * Each game corresponds to a specific game title, image, labels, link to the game, and a brief description.
+ * 
+ * The game list is typically used for displaying a set of games available in the application, providing information
+ * such as the game name, image, labels (e.g., categories, tags), link to the game page, and a short description of the game.
+ * 
+ * This type allows for organizing the game list with relevant information for each game, including details about the game's
+ * genre, theme, gameplay, and other key features. It can be used to showcase a variety of games and provide users with
+ * information about each game available in the application.
+ * 
+ * @typedef {Object[]} GameList
+ * @property {string} name - The name or title of the game.
+ * @property {string} image - The image or thumbnail representing the game.
+ * @property {string[]} labels - A list of labels or categories associated with the game.
+ * @property {string} linkToGame - The URL path or link to the game page.
+ * @property {string} description - A brief description or summary of the game.
+ * 
+ * @module types
+ */
+export type GameList = {
+    name: string;
+    image: string;
+    labels: string[];
+    linkToGame: string;
+    description: string;
+}[];
