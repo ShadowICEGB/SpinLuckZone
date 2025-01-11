@@ -58,12 +58,12 @@
     }
 </script>
 
-<div class="header mt-3 mx-3 rounded-tl-2xl rounded-tr-2xl dark:bg-surface-600 bg-tertiary-200">
+<div class="header mx-3 mt-3 rounded-xl dark:bg-surface-500 bg-tertiary-200">
     <div class="container flex justify-between items-center">
         <div class="flex items-center">
             <!-- Hamburger button to trigger sidebar opening on mobile devices -->
             <button 
-                class="hamburger ml-5 w-8 h-8 flex items-center justify-center 2xl:hidden" 
+                class="hamburger w-8 h-8 flex items-center justify-center 2xl:hidden" 
                 on:click={openSidebar} 
                 on:keydown={(e) => e.key === 'Enter' && openSidebar()} 
                 aria-label="Open sidebar"
