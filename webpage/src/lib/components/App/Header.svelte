@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { type DrawerSettings, getDrawerStore } from '@skeletonlabs/skeleton';
     const drawerStore = getDrawerStore();
+    import { page } from '$app/stores';
 
     // Import the popup component and the PopupSettings type from the Skeleton library
     import { popup } from '@skeletonlabs/skeleton';
     import type { PopupSettings } from '@skeletonlabs/skeleton';
+	import { signIn, signOut } from '@auth/sveltekit/client';
 
     // Popup for user profile
     const popupUserProfile: PopupSettings = {
@@ -104,19 +106,30 @@
                 <p class="text-xs select-none">Lvl (cooming soon)</p>
             </div>
             <button class="bg-tertiary-400 dark:bg-[#1d1d1d] p-1 rounded-2xl flex justify-center items-center ml-10" use:popup={popupUserProfile}>
-                <img src="/images/icons/user.png" alt="User_Logo" class="w-10 h-10 rounded-full" draggable="false">
+                {#if $page.data.session}
+                <img src="{$page.data.session.user?.image}" alt="User_Logo" class="w-10 h-10 rounded-full" draggable="false">
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                {:else}
+                <!-- svelte-ignore a11y_click_events_have_key_events -->
+                <!-- svelte-ignore a11y_no_static_element_interactions -->
+                <i class="fa-solid fa-right-to-bracket text-xl py-1 px-3" on:click={() => signIn()}></i>
+                {/if}
             </button>
 
             <!-- Popup for user profile -->
             <div class="bg-tertiary-400 dark:bg-[#1d1d1d] w-64 rounded-3xl z-50 flex flex-col items-center text-white shadow-lg" data-popup="popupUserProfile">
                 <!-- User Information Section -->
                 <div class="user flex flex-col items-center justify-center px-10 pt-5" id="wont-close">
-                    <img src="/images/icons/user.png" alt="User_Profile_Picture" class="w-20 h-20 rounded-full mb-1" draggable="false">
+                    {#if $page.data.session}
+                    <img src="{$page.data.session.user?.image}" alt="User_Profile_Picture" class="w-20 h-20 rounded-full mb-1" draggable="false">
+                    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                     <div class="user-info text-center">
-                        <p class="text-lg font-bold">username</p>
-                        <p class="text-xs text-gray-400 py-2 italic">useremail</p>
-                        <p class="text-base text-error-500">user role</p>
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <p class="text-lg font-bold" on:click={() => signOut()}>{$page.data.session.user?.name}</p>
+                        <p class="text-xs text-gray-400 py-2 italic">{$page.data.session.user?.email}</p>
+                        <p class="text-base text-error-500">TODO: user role</p>
                     </div>
+                    {/if}
                 </div>
             
                 <!-- Settings Section -->
