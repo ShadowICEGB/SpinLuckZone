@@ -63,14 +63,14 @@
         <div class="flex items-center">
             <!-- Hamburger button to trigger sidebar opening on mobile devices -->
             <button 
-                class="hamburger w-8 h-8 flex items-center justify-center 2xl:hidden" 
+                class="hamburger w-8 h-8 flex items-center justify-center xl-custom:hidden" 
                 on:click={openSidebar} 
                 on:keydown={(e) => e.key === 'Enter' && openSidebar()} 
                 aria-label="Open sidebar"
             >
                 <i class="fa-solid fa-bars p-3 bg-tertiary-400 dark:bg-[#1a1a1a] rounded-lg cursor-pointer"></i>
             </button>
-            <div class="space-x-5 2xl:ml-0 ml-12">
+            <div class="space-x-5 xl-custom:ml-0 ml-12">
                 <button aria-label="Notifications" class="relative" use:popup={popupNotification}>
                     <span class="badge-icon variant-filled-warning absolute -top-2 -right-2 z-10">2</span>
                     <i class="fa-regular fa-bell dark:bg-[#1d1d1d] bg-tertiary-400 py-3 px-4 rounded-lg"></i>
@@ -97,7 +97,7 @@
             </div>
         </div>
         <div>
-            <img src="/images/logos/SpinLuckZone.png" alt="SpinLuckZone_Logo" class="w-20 h-20 2xl:ml-28 ml-3" draggable="false" />
+            <img src="/images/logos/SpinLuckZone.png" alt="SpinLuckZone_Logo" class="w-20 h-20 xl-custom:ml-28 ml-3" draggable="false" />
         </div>
         <div class="flex items-center">
             <div class="dark:bg-[#1d1d1d] w-36 h-6 rounded-full flex justify-center items-center">
@@ -115,7 +115,7 @@
                     <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                     <div class="user-info text-center">
                         <!-- svelte-ignore a11y_click_events_have_key_events -->
-                        <p class="text-lg font-bold" on:click={() => signOut()}>username</p>
+                        <p class="text-lg font-bold">username</p>
                         <p class="text-xs text-gray-400 py-2 italic">useremail</p>
                         <p class="text-base text-error-500">TODO: user role</p>
                     </div>
